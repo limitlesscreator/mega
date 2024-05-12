@@ -6,7 +6,7 @@
 }
 
 .logo {
-  width: 70px;
+  width: 90px;
 }
 
 header {
@@ -24,6 +24,7 @@ header {
   padding: 0 15px;
   font-size: 19px;
 }
+
 .nav a:hover {
   color: #17294E;
 }
@@ -35,6 +36,7 @@ header {
   cursor: pointer;
   filter: invert(30%) sepia(14%) saturate(1501%) hue-rotate(181deg) brightness(94%) contrast(87%);
 }
+
 .nav img:hover {
   filter: invert(13%) sepia(12%) saturate(6087%) hue-rotate(195deg) brightness(91%) contrast(93%);
 }
@@ -50,6 +52,7 @@ header {
   align-items: center;
   justify-content: center;
 }
+
 .megaTop button {
   color: white;
   background: #1D428A;
@@ -79,6 +82,7 @@ h1 {
   font-size: 19px;
   margin-top: 100px;
   margin-bottom: 100px;
+  background: #F9F9F9;
 }
 
 .aboutTitle {
@@ -113,6 +117,74 @@ h1 {
 
 .description {
   margin-top: 60px;
+}
+
+.services {
+  margin-top: 50px;
+}
+
+.services_title {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 32px;
+  text-align: center;
+  position: relative;
+}
+.services_title:after {
+  content: "";
+  background: #1d428a;
+  width: 50px;
+  height: 3px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.elems_s {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.service_elem {
+  width: 32%;
+}
+.service_elem div {
+  text-align: center;
+  overflow: hidden;
+  font-size: 16.5px;
+  word-wrap: break-word;
+}
+.service_elem h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.service_elem img {
+  width: 132px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.section-1 {
+  background: #F9F9F9;
+}
+
+.learnMore {
+  color: white;
+  background: #1D428A;
+  width: 156px;
+  height: 45px;
+  text-transform: uppercase;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 30px auto 0;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
