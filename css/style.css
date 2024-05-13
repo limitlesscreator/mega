@@ -474,6 +474,7 @@ footer a {
   background: #28292B;
   color: white;
   border: none;
+  cursor: pointer;
 }
 
 .titleRide {

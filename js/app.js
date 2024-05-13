@@ -44,10 +44,13 @@ const sendMail = () => {
     number: document.querySelector('#number').value,
     car: document.querySelector('#cars').value,
     driverNameCarTypePlateNumber: document.querySelector('#driverNameCarTypePlateNumber').value,
-    timePuckUpDropOff: document.querySelector('#timePuckUpDropOff').value,
+    timePickUpDropOff: document.querySelector('#timePuckUpDropOff').value,
     specialRequest: document.querySelector('#specialRequest').value,
     promoCode: document.querySelector('#promoCode').value,
+    BookingID: Math.floor((Math.random() * 1000000) + 1),
   }
 
-  emailjs.send()
+  emailjs.send('service_x31tmfv','template_9zs0dfl',params).then(alert('Письмо отправлено!'))
 }
+
+document.querySelector('.bookARideBtn').addEventListener('click',() => sendMail())

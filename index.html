@@ -166,52 +166,53 @@
   <img class="cross" src="./img/cross-svgrepo-com.svg" alt="icon">
   <a href="tel:971042507772">+971-042507772</a>
 </div>
-
+<form >
 <div class="bookARideModal">
-  <div class="mainModal">
-    <img class="closeMainModal" src="./img/cross-svgrepo-com.svg" alt="icon">
-    <div class="titleRide">Book a RIDE</div>
-    <div class="inputElem">
-      <p>Passenger Name</p>
-      <input id="name" type="text" placeholder="Alex">
+    <div class="mainModal">
+      <img class="closeMainModal" src="./img/cross-svgrepo-com.svg" alt="icon">
+      <div class="titleRide">Book a RIDE</div>
+      <div class="inputElem">
+        <p>Passenger Name</p>
+        <input value="Alex" id="name" type="text" placeholder="Alex">
+      </div>
+      <div class="inputElem">
+        <p>Mobile Number / WhatsApp</p>
+        <input value="+88938928934" id="number" type="text" placeholder="+971501230000">
+      </div>
+      <div class="inputElem">
+        <p>Email</p>
+        <input value="randomsomthing@mail.ru" id="email" type="text" placeholder="Example@email.com">
+      </div>
+      <div class="inputElem">
+        <p>Select a Service</p>
+        <select style="color: black;" value="fiat" id="cars" name="cars">
+          <option  value="" disabled selected>Choose and option</option>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+      <div class="inputElem">
+        <p>driver name / car type / Plate number</p>
+        <input value="Mick ac232r BMW" id="driverNameCarTypePlateNumber" type="text" placeholder="Mohammed GMC l12345">
+      </div>
+      <div class="inputElem">
+        <p>Time, Pick-up and Drop-off Location</p>
+        <input value="8:10 am   motel - shop" id="timePuckUpDropOff" type="text" placeholder="6pm, Grand City Mall - Tram Dubai">
+      </div>
+      <div class="inputElem">
+        <p>Special Requests:</p>
+        <input value="without music" id="specialRequest" type="text" placeholder="quiet ride">
+      </div>
+      <div class="inputElem">
+        <p>PROMO-CODE</p>
+        <input value="2332" id="promoCode" type="text" placeholder="">
+      </div>
+      <button class="bookARideBtn"  type="submit" >Book a Ride Now</button>
     </div>
-    <div class="inputElem">
-      <p>Mobile Number / WhatsApp</p>
-      <input id="number" type="text" placeholder="+971501230000">
-    </div>
-    <div class="inputElem">
-      <p>Email</p>
-      <input id="email" type="text" placeholder="Example@email.com">
-    </div>
-    <div class="inputElem">
-      <p>Select a Service</p>
-      <select style="color: black;" value="fiat" id="cars" name="cars">
-        <option  value="" disabled selected>Choose and option</option>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="fiat">Fiat</option>
-        <option value="audi">Audi</option>
-      </select>
-    </div>
-    <div class="inputElem">
-      <p>driver name / car type / Plate number</p>
-      <input id="driverNameCarTypePlateNumber" type="text" placeholder="Mohammed GMC l12345">
-    </div>
-    <div class="inputElem">
-      <p>Time, Pick-up and Drop-off Location</p>
-      <input id="timePuckUpDropOff" type="text" placeholder="6pm, Grand City Mall - Tram Dubai">
-    </div>
-    <div class="inputElem">
-      <p>Special Requests:</p>
-      <input id="specialRequest" type="text" placeholder="quiet ride">
-    </div>
-    <div class="inputElem">
-      <p>PROMO-CODE</p>
-      <input id="promoCode" type="text" placeholder="">
-    </div>
-    <button >Book a Ride Now</button>
-  </div>
 </div>
+</form>
 
 <a class="scrollToTop" href="#home">
   <img  src="./img/angle-up.svg" alt="arrow">
