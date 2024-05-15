@@ -3,7 +3,7 @@
   padding: 0
   box-sizing: border-box
   font-family: "Open Sans", sans-serif
-  //scroll-behavior: smooth
+  scroll-behavior: smooth
 
 button
   color: black
@@ -13,7 +13,16 @@ button
 
 body
   padding-top: 90px
-  overflow: hidden
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+    padding-top: 0
+
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
 
 header
   position: fixed
@@ -28,9 +37,32 @@ header
   align-items: center
   padding: 0 70px 0 15px
   box-shadow: rgb(0 0 0 / 35%) 0px 2px 12px 2px
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+    display: none
 
 
-.nav a
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
+
+.secretHeader
+  display: none
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+    display: block
+
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
+
+.navV a
   color: #415376
   text-decoration: none
   font-weight: 700
@@ -38,19 +70,19 @@ header
   font-size: 19px
 
 
-.nav a:hover
+.navV a:hover
   color: #17294E
 
 
-.nav img
+.navV img
   width: 19px
   position: relative
-  bottom: -5px
+  bottom: 1px
   cursor: pointer
   filter: invert(30%) sepia(14%) saturate(1501%) hue-rotate(181deg) brightness(94%) contrast(87%)
 
 
-.nav img:hover
+.navV img:hover
   filter: invert(13%) sepia(12%) saturate(6087%) hue-rotate(195deg) brightness(91%) contrast(93%)
 
 
@@ -64,6 +96,17 @@ header
   flex-direction: column
   align-items: center
   justify-content: center
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+    height: 400px
+
+  @media (max-width: 760px)
+    height: 300px
+
+  @media (max-width: 480px)
 
 
 .megaTop button
@@ -84,7 +127,7 @@ h1
   text-shadow: 0.03em 0.03em 3px rgb(0, 0, 0)
 
 
-.container
+.containerR
   width: 1290px
   margin: 0 auto
 
@@ -93,14 +136,34 @@ h1
   display: flex
   justify-content: space-between
   font-size: 19px
-
   background: #F9F9F9
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+    flex-direction: column-reverse
+    text-align: center
+
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
 
 
 .aboutTitle
   font-size: 49px
   font-weight: bold
   position: relative
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+    margin-top: 30px
+
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
 
 
 .underline
@@ -110,21 +173,71 @@ h1
   width: 100px
   bottom: -27px
   left: 0
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+    left: 50%
+    transform: translateX(-50%)
+
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
 
 
 .imageMerce, .textInfo
   width: 47%
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+    width: auto
+
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
+
+
 
 
 .imageMerce img
   width: 100%
   position: relative
   top: -70px
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+    top: 0
+
+  @media (max-width: 900px)
+    background-size: cover
+
+
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
 
 
 .imageMerce
   height: 440px
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15)
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+    height: auto
+    display: flex
+    align-items: center
+
+  @media (max-width: 900px)
+    height: 200px
+    overflow: hidden
+    background-size: cover
+
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
 
 
 .description
@@ -132,6 +245,16 @@ h1
 
 .services
   margin-top: 50px
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+
+
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
 
 .services_title
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)
@@ -154,20 +277,55 @@ h1
   margin-top: 40px
   display: flex
   justify-content: space-between
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+    flex-wrap: wrap
+    justify-content: space-evenly
+
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
 
 .service_elem
   width: 32%
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+    width: 240px
+
+  @media (max-width: 760px)
+    width: 80%
+    margin-bottom: 15px
+
+  @media (max-width: 480px)
   div
     text-align: center
     overflow: hidden
     font-size: 16.5px
     word-wrap: break-word
+    @media (max-width: 1350px)
+
+    @media (max-width: 1200px)
+      font-size: 14px
+
+    @media (max-width: 900px)
+
+    @media (max-width: 760px)
+      font-size: 16px
+
+    @media (max-width: 480px)
   h2
     margin-top: 10px
     font-size: 20px
     text-align: center
     margin-bottom: 10px
   img
+    height: 150px
     width: 132px
     border-radius: 50%
     margin: 0 auto
@@ -178,27 +336,56 @@ h1
 
 .section-1
   padding: 100px 0
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+
+  @media (max-width: 760px)
+    padding: 50px 0
+
+  @media (max-width: 480px)
 .learnMore
   color: white
   background: #1D428A
   width: 156px
   height: 45px
   text-transform: uppercase
-  border: none
   font-size: 16px
   cursor: pointer
-  margin: 30px auto 0
-  display: block
+  display: inline-block
+  border: white 7px double
 
 .text_form
   display: flex
   margin-top: 70px
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+
+  @media (max-width: 760px)
+    flex-wrap: wrap
+
+  @media (max-width: 480px)
 
 .infoMegaLuxury
   width: 43%
   text-align: center
   font-size: 16px
   word-break: break-word
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+
+  @media (max-width: 760px)
+    width: 100%
+
+  @media (max-width: 480px)
   a
     text-decoration: none
     color: #1d428a
@@ -232,6 +419,16 @@ h1
 .forms
   width: 50%
   margin-left: auto
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+
+  @media (max-width: 760px)
+    width: 100%
+
+  @media (max-width: 480px)
 
 .oneLineForm
   display: flex
@@ -274,7 +471,7 @@ h1
   display: block
   width: 100%
 
-.map-container
+.map-containerR
   width: 100%
   height: 550px
   position: relative
@@ -382,7 +579,8 @@ footer
   position: fixed
   top: 0
   left: 0
-  z-index: 1000
+  z-index: -1000
+  opacity: 0
   width: 100%
   height: 100%
   background: rgba(0, 0, 0, 0.73)
@@ -451,3 +649,37 @@ footer
 .titleLogo
   width: 388px
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(106%) contrast(103%)
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
+    width: 80%
+
+
+@media (max-width: 1350px)
+  .containerR
+    width: 1150px
+  .megaTop
+    background-position: 0 0
+
+@media (max-width: 1200px)
+  .containerR
+    width: 850px
+
+@media (max-width: 900px)
+  .containerR
+    width: 700px
+
+@media (max-width: 760px)
+  .containerR
+    width: 450px
+
+@media (max-width: 480px)
+  .containerR
+    width: 95%
+

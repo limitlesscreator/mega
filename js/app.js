@@ -1,3 +1,18 @@
+
+
+
+
+
+
+// накидываем на кнопку book a trip модалку для клиенту
+document.querySelector('#bookTrip').addEventListener('click',() => {
+  const modal = document.querySelector('.bookARideModal')
+  modal.style.zIndex = 1000
+  modal.style.opacity = 1
+  document.querySelector('body').style.overflow = 'hidden'
+})
+
+
 // для анимации появлении блоков.
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -9,7 +24,7 @@ const observer = new IntersectionObserver((entries) => {
   })
 })
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Отображение номера по кнопке из Header
 const hiddenElements = document.querySelectorAll('.hidden')
@@ -29,7 +44,7 @@ document.querySelector('.cross').addEventListener('click', () => {
   document.querySelector('body').style.overflow = 'auto'
 })
 // ----------------------------------------------------------------------
-
+// отправка письма
 
 
 document.querySelector('.closeMainModal').addEventListener('click', () => {
@@ -38,78 +53,67 @@ document.querySelector('.closeMainModal').addEventListener('click', () => {
   document.querySelector('body').style.overflow = 'auto'
 })
 
-const sendMail = () => {
-  let params = {
-    passengerName: document.querySelector('#name').value,
-    number: document.querySelector('#number').value,
-    car: document.querySelector('#cars').value,
-    driverNameCarTypePlateNumber: document.querySelector('#driverNameCarTypePlateNumber').value,
-    timePickUpDropOff: document.querySelector('#timePuckUpDropOff').value,
-    specialRequest: document.querySelector('#specialRequest').value,
-    promoCode: document.querySelector('#promoCode').value,
-    BookingID: Math.floor((Math.random() * 1000000) + 1),
-  }
 
-  emailjs.send('service_x31tmfv','template_9zs0dfl',params).then(alert('Письмо отправлено!'))
+
+//client form
+const sendMail = () => {
+  // let params = {
+  //   passengerName: document.querySelector('#name').value,
+  //   number: document.querySelector('#number').value,
+  //   car: document.querySelector('#cars').value,
+  //   driverNameCarTypePlateNumber: document.querySelector('#driverNameCarTypePlateNumber').value,
+  //   timePickUpDropOff: document.querySelector('#timePuckUpDropOff').value,
+  //   specialRequest: document.querySelector('#specialRequest').value,
+  //   promoCode: document.querySelector('#promoCode').value,
+  //   BookingID: `${Math.floor((Math.random() * 1000000) + 1)}`,
+  // }
+  //
+  // emailjs.send('service_x31tmfv','template_9zs0dfl',params).then(() => alert('Письмо отправлено!'))
+
+  sendToWhatsapp()
 }
 
 document.querySelector('.bookARideBtn').addEventListener('click',() => sendMail())
 
+// -----------------------------------------------------------------------------------------------------
+
+// плавный скролл для сафари
 
 
-//удалить
+import smoothscroll from "smoothscroll-polyfill";
 
-  document.querySelector('.closeMainModal').click()
+smoothscroll.polyfill();
+////////////////////////////////////////////////////////////////////////
 
 
+// отправка what's up формы
 
-function smoothScroll(target, duration) {
-  var target = document.querySelector(target);
-  var targetPosition = target.getBoundingClientRect().top;
-  var startPosition = window.pageYOffset;
-  var distance = targetPosition - startPosition;
-  var startTime = null;
 
-  function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    var timeElapsed = currentTime - startTime;
-    var run = easing(timeElapsed, startPosition, distance, duration);
-    window.scrollTo(0, run);
-    if (timeElapsed < duration) requestAnimationFrame(animation);
-  }
+function sendToWhatsapp(){
+  let sendToThisNumber = "+971505381389"
 
-  function easing(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return c / 2 *t * t + b;
-    t--;
-    return -c / 2 * (t * (t - 2) - 1) + b;
-  }
+  // clientForm
+  const passengerName = document.querySelector('#name').value
+   const clientNumber = document.querySelector('#number').value
+   const car = document.querySelector('#cars').value
+   const driverNameCarTypePlateNumber = document.querySelector('#driverNameCarTypePlateNumber').value
+   const timePickUpDropOff = document.querySelector('#timePuckUpDropOff').value
+   const specialRequest = document.querySelector('#specialRequest').value
+   const promoCode = document.querySelector('#promoCode').value
 
-  requestAnimationFrame(animation);
+  let url = "https://wa/me/" + sendToThisNumber + "?text"
+  + `passenger name: ${passengerName}%0a`
+  + `client number: ${clientNumber}%0a`
+  + `car: ${car}%0a`
+  + `driver Name, Car Type, Plate Number : ${driverNameCarTypePlateNumber}%0a`
+  + `time PickUp - DropOff : ${timePickUpDropOff}%0a`
+  + `special request: ${specialRequest}%0a`
+  + `promo code: ${promoCode}%0a`
+
+  window.open(url, '_blank').focus()
 }
 
-var home = document.querySelector('#home');
-var about = document.querySelector('#about');
-var services = document.querySelector('#services');
-var contact = document.querySelector('#contact');
 
-var homeLink = document.querySelector('a[href="#home"]');
-var aboutLink = document.querySelector('a[href="#about"]');
-var servicesLink = document.querySelector('a[href="#services"]');
-var contactLink = document.querySelector('a[href="#contact"]');
 
-homeLink.addEventListener('click', function() {
-  smoothScroll('#home', 1000);
-});
 
-aboutLink.addEventListener('click', function() {
-  smoothScroll('#about', 1000);
-});
-
-servicesLink.addEventListener('click', function() {
-  smoothScroll('#services', 1000);
-});
-
-contactLink.addEventListener('click', function() {
-  smoothScroll('#contact', 1000);
-});
+////////////////////////////////////////////////////////////////////////
