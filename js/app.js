@@ -1,9 +1,11 @@
 // плавный скролл для сафари
 
 
-import smoothscroll from "smoothscroll-polyfill";
 
-smoothscroll.polyfill();
+
+import {polyfill} from "smoothscroll-polyfill";
+
+polyfill();
 ////////////////////////////////////////////////////////////////////////
 
 
