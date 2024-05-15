@@ -2,10 +2,9 @@
 
 
 
-
-import {polyfill} from "smoothscroll-polyfill";
-
-polyfill();
+// import {polyfill} from "smoothscroll-polyfill";
+//
+// polyfill();
 ////////////////////////////////////////////////////////////////////////
 
 
