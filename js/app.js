@@ -12,6 +12,13 @@ document.querySelector('#bookTrip').addEventListener('click',() => {
   document.querySelector('body').style.overflow = 'hidden'
 })
 
+// document.querySelector('#bookTrip2').addEventListener('click',() => {
+//   const modal = document.querySelector('.bookARideModal')
+//   modal.style.zIndex = 1000
+//   modal.style.opacity = 1
+//   document.querySelector('body').style.overflow = 'hidden'
+// })
+
 
 // для анимации появлении блоков.
 const observer = new IntersectionObserver((entries) => {
