@@ -1,3 +1,10 @@
+// плавный скролл для сафари
+
+
+import smoothscroll from "smoothscroll-polyfill";
+
+smoothscroll.polyfill();
+////////////////////////////////////////////////////////////////////////
 
 
 
@@ -84,13 +91,6 @@ document.querySelector('.bookARideBtn').addEventListener('click',() => sendMail(
 
 // -----------------------------------------------------------------------------------------------------
 
-// плавный скролл для сафари
-
-
-import smoothscroll from "smoothscroll-polyfill";
-
-smoothscroll.polyfill();
-////////////////////////////////////////////////////////////////////////
 
 
 // отправка what's up формы

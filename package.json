@@ -6,6 +6,7 @@
   "keywords": [
     ""
   ],
+  "type": "module",
   "license": "",
   "author": "",
   "scripts": {
