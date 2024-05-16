@@ -104,7 +104,7 @@ function sendToWhatsapp(){
    const specialRequest = document.querySelector('#specialRequest').value
    const promoCode = document.querySelector('#promoCode').value
 
-  let url = "https://wa.me/" + sendToThisNumber + "?text"
+  let url = "https://wa.me/" + sendToThisNumber + "?text="
   + `passenger name: ${passengerName}%0a`
   + `client number: ${clientNumber}%0a`
   + `car: ${car}%0a`
