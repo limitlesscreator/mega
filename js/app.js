@@ -15,6 +15,13 @@ document.querySelector('#bookTrip2').addEventListener('click',() => {
   document.querySelector('body').style.overflow = 'hidden'
 })
 
+document.querySelector('#bookTrip3').addEventListener('click',() => {
+  const modal = document.querySelector('.bookARideModal')
+  modal.style.zIndex = 10001
+  modal.style.opacity = 1
+  document.querySelector('body').style.overflow = 'hidden'
+})
+
 
 // для анимации появлении блоков.
 const observer = new IntersectionObserver((entries) => {
@@ -97,7 +104,7 @@ function sendToWhatsapp(){
    const specialRequest = document.querySelector('#specialRequest').value
    const promoCode = document.querySelector('#promoCode').value
 
-  let url = "https://wa/me/" + sendToThisNumber + "?text"
+  let url = "https://wa.me/" + sendToThisNumber + "?text"
   + `passenger name: ${passengerName}%0a`
   + `client number: ${clientNumber}%0a`
   + `car: ${car}%0a`
@@ -106,7 +113,7 @@ function sendToWhatsapp(){
   + `special request: ${specialRequest}%0a`
   + `promo code: ${promoCode}%0a`
 
-  window.open(url, '_blank').focus()
+  window.open(url, '_blank')
 }
 
 
