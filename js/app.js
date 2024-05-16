@@ -1,15 +1,3 @@
-// плавный скролл для сафари
-
-
-
-// import {polyfill} from "smoothscroll-polyfill";
-//
-// polyfill();
-////////////////////////////////////////////////////////////////////////
-
-
-
-
 
 
 // накидываем на кнопку book a trip модалку для клиенту
@@ -20,12 +8,12 @@ document.querySelector('#bookTrip').addEventListener('click',() => {
   document.querySelector('body').style.overflow = 'hidden'
 })
 
-// document.querySelector('#bookTrip2').addEventListener('click',() => {
-//   const modal = document.querySelector('.bookARideModal')
-//   modal.style.zIndex = 1000
-//   modal.style.opacity = 1
-//   document.querySelector('body').style.overflow = 'hidden'
-// })
+document.querySelector('#bookTrip2').addEventListener('click',() => {
+  const modal = document.querySelector('.bookARideModal')
+  modal.style.zIndex = 10001
+  modal.style.opacity = 1
+  document.querySelector('body').style.overflow = 'hidden'
+})
 
 
 // для анимации появлении блоков.
