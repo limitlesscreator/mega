@@ -1,5 +1,4 @@
 
-
 // накидываем на кнопку book a trip модалку для клиенту
 document.querySelector('#bookTrip').addEventListener('click',() => {
   const modal = document.querySelector('.bookARideModal')
@@ -67,23 +66,33 @@ document.querySelector('.closeMainModal').addEventListener('click', () => {
 
 //client form
 const sendMail = () => {
-  // let params = {
-  //   passengerName: document.querySelector('#name').value,
-  //   number: document.querySelector('#number').value,
-  //   car: document.querySelector('#cars').value,
-  //   driverNameCarTypePlateNumber: document.querySelector('#driverNameCarTypePlateNumber').value,
-  //   timePickUpDropOff: document.querySelector('#timePuckUpDropOff').value,
-  //   specialRequest: document.querySelector('#specialRequest').value,
-  //   promoCode: document.querySelector('#promoCode').value,
-  //   BookingID: `${Math.floor((Math.random() * 1000000) + 1)}`,
-  // }
-  //
-  // emailjs.send('service_x31tmfv','template_9zs0dfl',params).then(() => alert('Письмо отправлено!'))
+  let params = {
+    BookingID: `${Math.floor((Math.random() * 1000000) + 1)}`,
+    passengerName: document.querySelector('#name').value,
+    number: document.querySelector('#number').value,
+    email: document.querySelector('#email').value,
+    service: document.querySelector('#service').value,
+    timePickUpDropOff: document.querySelector('#timePuckUpDropOff').value,
+    specialRequest: document.querySelector('#specialRequest').value,
+    selectaservice: document.querySelector('#selectService').value,
+    promoCode: document.querySelector('#promoCode').value,
+  }
 
-  sendToWhatsapp()
+  emailjs.send('service_x31tmfv','template_9zs0dfl',params).then(() => {
+    alert('Письмо отправлено! С вами свяжутся в течении 5-ти минут.')
+    document.querySelector('.bookARideBtn').disabled = false
+    document.querySelector('.bookARideBtn').innerHTML = 'book a ride now'
+
+  })
+
+  // sendToWhatsapp()
 }
 
-document.querySelector('.bookARideBtn').addEventListener('click',() => sendMail())
+document.querySelector('.bookARideBtn').addEventListener('click',(e) => {
+  e.currentTarget.innerHTML = 'wait...'
+  document.querySelector('.bookARideBtn').disabled = true
+  sendMail()
+})
 
 // -----------------------------------------------------------------------------------------------------
 
@@ -92,29 +101,29 @@ document.querySelector('.bookARideBtn').addEventListener('click',() => sendMail(
 // отправка what's up формы
 
 
-function sendToWhatsapp(){
-  let sendToThisNumber = "+971505381389"
-
-  // clientForm
-  const passengerName = document.querySelector('#name').value
-   const clientNumber = document.querySelector('#number').value
-   const car = document.querySelector('#cars').value
-   const driverNameCarTypePlateNumber = document.querySelector('#driverNameCarTypePlateNumber').value
-   const timePickUpDropOff = document.querySelector('#timePuckUpDropOff').value
-   const specialRequest = document.querySelector('#specialRequest').value
-   const promoCode = document.querySelector('#promoCode').value
-
-  let url = "https://wa.me/" + sendToThisNumber + "?text="
-  + `passenger name: ${passengerName}%0a`
-  + `client number: ${clientNumber}%0a`
-  + `car: ${car}%0a`
-  + `driver Name, Car Type, Plate Number : ${driverNameCarTypePlateNumber}%0a`
-  + `time PickUp - DropOff : ${timePickUpDropOff}%0a`
-  + `special request: ${specialRequest}%0a`
-  + `promo code: ${promoCode}%0a`
-
-  window.open(url, '_blank')
-}
+// function sendToWhatsapp(){
+//   let sendToThisNumber = "+971505381389"
+//
+//   // clientForm
+//   const passengerName = document.querySelector('#name').value
+//    const clientNumber = document.querySelector('#number').value
+//    const car = document.querySelector('#cars').value
+//    // const driverNameCarTypePlateNumber = document.querySelector('#driverNameCarTypePlateNumber').value
+//    const timePickUpDropOff = document.querySelector('#timePuckUpDropOff').value
+//    const specialRequest = document.querySelector('#specialRequest').value
+//    const promoCode = document.querySelector('#promoCode').value
+//
+//   let url = "https://wa.me/" + sendToThisNumber + "?text="
+//   + `passenger name: ${passengerName}%0a`
+//   + `client number: ${clientNumber}%0a`
+//   + `car: ${car}%0a`
+//   // + `driver Name, Car Type, Plate Number : ${driverNameCarTypePlateNumber}%0a`
+//   + `time PickUp - DropOff : ${timePickUpDropOff}%0a`
+//   + `special request: ${specialRequest}%0a`
+//   + `promo code: ${promoCode}%0a`
+//
+//   window.open(url, '_blank')
+// }
 
 
 

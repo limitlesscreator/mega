@@ -46,7 +46,7 @@
 <header >
   <div><img class="logo" src="./img/logo.webp" alt="logo"></div>
   <div class="navV">
-    <button class="learnMore" id="bookTrip">Book a trip</button>
+    <button class="learnMore" style="min-width: 187px"  id="bookTrip">book a ride now</button>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -77,7 +77,7 @@
             <a class="nav-link" href="#contact" aria-disabled="true">Contact</a>
           </li>
           <li class="nav-item">
-            <button style="border: none;" class="learnMore" id="bookTrip2">Book a trip</button>
+            <button style="min-width: 187px; border: none;" class="learnMore" id="bookTrip2">book a ride now</button>
           </li>
 
         </ul>
@@ -90,7 +90,8 @@
 <div  class="megaTop hidden">
 <!--  <h1>MEGA TOP</h1>-->
   <img class="titleLogo" src="./img/logoForTitle.png" alt="logo">
-  <button>READ MORE</button>
+  <a href="#contact"><button>READ MORE</button></a>
+
 </div>
 
 <div id="about" class="section-1 ">
@@ -149,7 +150,7 @@
     <div id="contact"></div>
 
   </div>
-  <button style="margin: 50px auto 0; display: block;" id="bookTrip3" class="learnMore" >Book a trip</button>
+  <button  style="margin: 50px auto 0; display: block;min-width: 187px;" id="bookTrip3" class="learnMore" >book a ride now</button>
 </div>
 
 <div  class="section-2 hidden">
@@ -158,15 +159,18 @@
       <h2>CONTACT</h2>
       <div class="text_form">
         <div class="infoMegaLuxury">
-          <p>Mega Top Luxury Motors Vehicles Services L.L.C
-            Office 101, 1st floor Intercoil International Building Al Quoz Industrial Area 3 , Umm Suqeim Road, Dubai P.O Box: 390629</p>
+          <p>Mega Top Luxury Motors Vehicles Services L.L.C <br>
+            Warehouse # 58
+            Al Qouz Industrial Area 2
+            Dubai
+            UAE</p>
           <br>
           <p class="infoMailPhone">
             <img src="./img/phone.svg" alt="icon" class="icon">
             <a href="https://wa.me/971505381389">+971 50 538 1389</a>
             <br>
             <img style="top: 3px" src="./img/message.svg" alt="icon" class="icon">  <a href="mailto:megatopuae@gmail.com">megatopuae@gmail.com</a>
-            <p > <img src="./img/clock-o.svg" alt="icon" class="icon"> Mon to Fri 9am to 6pm <br> Sat 9am to 4pm <br>Sunday Closed</p>
+            <p > <img src="./img/clock-o.svg" alt="icon" class="icon" style="position: relative;top: 0px;">work 24/7 <br> <br></p>
             <p class="marginTopSub">
               The ultimate goal is Customer satisfaction.To <br>
               build consistent business relationships,<br>
@@ -193,8 +197,7 @@
   </div>
 </div>
 
-  <iframe  id="contact_664089c9a6bdb" class="map-containerR iframeLazyload entered loaded hidden" data-src="https://maps-cdn.site123.com/include/globalMapDisplay.php?q=Mega Top Luxury Motors Vehicles Services L.L.C&amp;z=15&amp;l=en&amp;ilfc=" frameborder="0" data-ll-status="loaded" src="https://maps-cdn.site123.com/include/globalMapDisplay.php?q=Mega Top Luxury Motors Vehicles Services L.L.C&amp;z=15&amp;l=en&amp;ilfc="></iframe>
-
+<iframe class="map-containerR" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3612.091501328282!2d55.24457157537974!3d25.132597177752643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDA3JzU3LjQiTiA1NcKwMTQnNDkuNyJF!5e0!3m2!1sen!2sru!4v1716210235218!5m2!1sen!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 <div class="containerR hidden">
   <footer>
     <div>
@@ -219,46 +222,58 @@
 <div class="bookARideModal">
     <div class="mainModal">
       <img class="closeMainModal" src="./img/cross-svgrepo-com.svg" alt="icon">
-      <div class="titleRide">Book a RIDE</div>
+      <div style="padding: 0 20px" class="titleRide">Book a RIDE</div>
       <div class="inputElem">
         <p>Passenger Name</p>
-        <input value="Alex" id="name" type="text" placeholder="Alex">
+        <input value="" id="name" type="text" placeholder="Alex">
       </div>
       <div class="inputElem">
         <p>Mobile Number / WhatsApp</p>
-        <input value="+88938928934" id="number" type="text" placeholder="+971501230000">
+        <input value="" id="number" type="text" placeholder="+971501230000">
       </div>
       <div class="inputElem">
         <p>Email</p>
-        <input value="randomsomthing@mail.ru" id="email" type="text" placeholder="Example@email.com">
+        <input value="" id="email" type="text" placeholder="Example@email.com">
       </div>
       <div class="inputElem">
         <p>Select a Service</p>
-        <select style="color: black;" value="fiat" id="cars" name="cars">
+        <select style="color: black;" value="" id="service" name="cars">
           <option  value="" disabled selected>Choose and option</option>
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="fiat">Fiat</option>
-          <option value="audi">Audi</option>
+          <option value="aiport">Airport Transfer</option>
+          <option value="cityride">City Ride</option>
+          <option value="citytocity">City-to-City Ride</option>
+          <option value="personalChauHourly">Personal Chauffeur Hourly</option>
+          <option value="personalChauDaily">Personal Chauffeur Daily</option>
+          <option value="Special Event">Special Event</option>
+          <option value="coropratebooking">Corporate Booking</option>
         </select>
       </div>
+<!--      <div class="inputElem">-->
+<!--        <p>driver name / car type / Plate number</p>-->
+<!--        <input value="Mick ac232r BMW" id="driverNameCarTypePlateNumber" type="text" placeholder="Mohammed GMC l12345">-->
+<!--      </div>-->
       <div class="inputElem">
-        <p>driver name / car type / Plate number</p>
-        <input value="Mick ac232r BMW" id="driverNameCarTypePlateNumber" type="text" placeholder="Mohammed GMC l12345">
-      </div>
-      <div class="inputElem">
-        <p>Time, Pick-up and Drop-off Location</p>
-        <input value="8:10 am   motel - shop" id="timePuckUpDropOff" type="text" placeholder="6pm, Grand City Mall - Tram Dubai">
+        <p>Time, pick-up and destination location</p>
+        <input value="" id="timePuckUpDropOff" type="text" placeholder="6pm, Grand City Mall - Tram Dubai">
       </div>
       <div class="inputElem">
         <p>Special Requests:</p>
-        <input value="without music" id="specialRequest" type="text" placeholder="quiet ride">
+        <input value="" id="specialRequest" type="text" placeholder="quite ride">
+      </div>
+      <div class="inputElem">
+        <p>Select a Service</p>
+        <select style="color: black;" value="" id="selectService" name="selectService">
+          <option  value="" disabled selected>Choose and option</option>
+          <option value="aiport">Business ( Lexus, Tesla ) </option>
+          <option value="cityride"> Premier ( Gmc Yukon )</option>
+
+        </select>
       </div>
       <div class="inputElem">
         <p>PROMO-CODE</p>
-        <input value="2332" id="promoCode" type="text" placeholder="">
+        <input value="" id="promoCode" type="text" placeholder="">
       </div>
-      <button class="bookARideBtn"  type="submit" >Book a Ride Now</button>
+      <button class="bookARideBtn" style="min-width: 187px"   type="submit" >book a ride now</button>
     </div>
 </div>
 
